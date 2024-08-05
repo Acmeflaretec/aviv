@@ -7,18 +7,26 @@ const HomeAbout = () => {
     <AboutSection>
       <ContentWrapper>
         <LeftColumn>
-          <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <Heading>Radiant Beauty</Heading>
-            <Subtitle>Unveiling Nature's Secrets</Subtitle>
-            <Description>
-              At Lumière Cosmetics, we believe in harnessing the power of nature to reveal your inner glow. 
-              Our luxurious formulations combine rare botanical extracts with cutting-edge skincare science, 
-              creating a harmonious blend that nourishes, rejuvenates, and illuminates your skin.
-            </Description>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+          <Heading>Embrace Natural Beauty</Heading>
+          <Subtitle>Empowerment Through Sustainable Skincare</Subtitle>
+          <Description>
+              Welcome to AVIV where beauty meets nature. We are a cosmetic company dedicated to providing high-quality, natural, and sustainable products that nourish and enhance your beauty. Our mission is to empower individuals to embrace their unique beauty while promoting a healthier planet.
+          </Description>
+
           </motion.div>
           <Stats>
             {statsData.map((stat, index) => (
-              <motion.div key={index} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: index * 0.1 }}>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
                 <StatItem>
                   <StatNumber>{stat.number}</StatNumber>
                   <StatLabel>{stat.label}</StatLabel>
@@ -30,7 +38,11 @@ const HomeAbout = () => {
         <RightColumn>
           <ImageGrid>
             {imageData.map((image, index) => (
-              <motion.div key={index} whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
+              <motion.div
+                key={index}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
                 <GridImage src={image.src} alt={image.alt} />
               </motion.div>
             ))}
@@ -42,7 +54,7 @@ const HomeAbout = () => {
 };
 
 const AboutSection = styled.section`
-  background: linear-gradient(135deg, #FFF5E6, #FFF0F5);
+  background: linear-gradient(135deg, #ffffff, #fff5e6);
   padding: 100px 0;
 `;
 
@@ -69,14 +81,14 @@ const RightColumn = styled.div`
 
 const Heading = styled.h2`
   font-size: 3rem;
-  color: #8A2BE2;
+  color: #FF0000; /* Red */
   margin-bottom: 0.5rem;
   font-family: 'Playfair Display', serif;
 `;
 
 const Subtitle = styled.h3`
   font-size: 1.5rem;
-  color: #FF69B4;
+  color: #D4AF37; /* Gold */
   margin-bottom: 1.5rem;
   font-family: 'Montserrat', sans-serif;
 `;
@@ -102,7 +114,7 @@ const StatItem = styled.div`
 const StatNumber = styled.div`
   font-size: 2.5rem;
   font-weight: bold;
-  color: #FF1493;
+  color: #FF0000; /* Red */
   font-family: 'Playfair Display', serif;
 `;
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 function Footer() {
@@ -6,7 +7,9 @@ function Footer() {
     <FooterContainer>
       <FooterContent>
         <FooterSection>
-          <FooterLogo>AVIV</FooterLogo>
+          <FooterLogo>
+            <img src="logo.png" alt="BeautyGlow logo" width={100} />
+          </FooterLogo>
           <FooterTagline>Enhance Your Natural Beauty</FooterTagline>
           <SocialIcons>
             <SocialIcon href="#" aria-label="Facebook">
@@ -26,39 +29,44 @@ function Footer() {
 
         <FooterSection>
           <FooterHeading>Quick Links</FooterHeading>
-          <FooterLink href="#">Home</FooterLink>
-          <FooterLink href="#">Products</FooterLink>
-          <FooterLink href="#">About Us</FooterLink>
-          <FooterLink href="#">Contact</FooterLink>
+          <nav>
+            <FooterLink href="#">Home</FooterLink>
+            <FooterLink href="#">Products</FooterLink>
+            <FooterLink href="#">About Us</FooterLink>
+            <FooterLink href="#">Contact</FooterLink>
+          </nav>
         </FooterSection>
 
         <FooterSection>
           <FooterHeading>Customer Care</FooterHeading>
-          <FooterLink href="#">FAQ</FooterLink>
-          <FooterLink href="#">Shipping & Returns</FooterLink>
-          <FooterLink href="#">Privacy Policy</FooterLink>
-          <FooterLink href="#">Terms & Conditions</FooterLink>
+          <nav>
+            <FooterLink href="#">FAQ</FooterLink>
+            <FooterLink href="#">Shipping & Returns</FooterLink>
+            <FooterLink href="#">Privacy Policy</FooterLink>
+            <FooterLink href="#">Terms & Conditions</FooterLink>
+          </nav>
         </FooterSection>
 
         <FooterSection>
           <FooterHeading>Newsletter</FooterHeading>
           <NewsletterText>Stay updated with our latest offers and products.</NewsletterText>
-          <NewsletterForm>
-            <NewsletterInput type="email" placeholder="Enter your email" />
+          <NewsletterForm aria-label="Newsletter Subscription">
+            <NewsletterInput type="email" placeholder="Enter your email" aria-label="Email for newsletter" required />
             <NewsletterButton type="submit">Subscribe</NewsletterButton>
           </NewsletterForm>
         </FooterSection>
       </FooterContent>
       <FooterBottom>
-        <Copyright>&copy; 2024 BeautyGlow. All rights reserved.</Copyright>
+        <Copyright>&copy; 2024 Aviv. All rights reserved.</Copyright>
+        <Copyright>Designed by <Link className='text-decoration-none' target='_blank' to={'https://www.acmeflare.in/'}>Acmeflare</Link> </Copyright>
       </FooterBottom>
     </FooterContainer>
   );
 }
 
 const FooterContainer = styled.footer`
-  background-color: #faf0e6;
-  color: #4a4a4a;
+  background-color: #fff;
+  color: #333;
   padding: 60px 0 20px;
   font-family: 'Arial', sans-serif;
 `;
@@ -70,18 +78,24 @@ const FooterContent = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
-const FooterSection = styled.div`
+const FooterSection = styled.section`
   flex: 1 1 200px;
   margin-bottom: 30px;
   min-width: 200px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 40px;
+  }
 `;
 
-const FooterLogo = styled.h2`
-  font-size: 24px;
+const FooterLogo = styled.div`
   margin-bottom: 10px;
-  color: #ff69b4;
 `;
 
 const FooterTagline = styled.p`
@@ -95,31 +109,31 @@ const SocialIcons = styled.div`
 `;
 
 const SocialIcon = styled.a`
-  color: #4a4a4a;
+  color: #333;
   font-size: 18px;
   transition: color 0.3s ease;
 
   &:hover {
-    color: #ff69b4;
+    color: #c0392b;
   }
 `;
 
 const FooterHeading = styled.h3`
   font-size: 18px;
   margin-bottom: 15px;
-  color: #ff69b4;
+  color: #c0392b;
 `;
 
 const FooterLink = styled.a`
   display: block;
-  color: #4a4a4a;
+  color: #333;
   text-decoration: none;
   margin-bottom: 8px;
   font-size: 14px;
   transition: color 0.3s ease;
 
   &:hover {
-    color: #ff69b4;
+    color: #c0392b;
   }
 `;
 
@@ -143,7 +157,7 @@ const NewsletterInput = styled.input`
 `;
 
 const NewsletterButton = styled.button`
-  background-color: #ff69b4;
+  background-color: #c0392b;
   color: white;
   border: none;
   padding: 10px 15px;
@@ -152,7 +166,7 @@ const NewsletterButton = styled.button`
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: #ff1493;
+    background-color: #a93226;
   }
 `;
 

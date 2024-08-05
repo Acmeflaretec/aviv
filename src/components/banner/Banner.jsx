@@ -55,7 +55,7 @@ const Title = styled(motion.h1)`
   font-family: 'Playfair Display', serif;
   font-size: 4.5rem;
   font-weight: 700;
-  color: #800000; /* Dark Red */
+  color: #FF0000; /* Red */
   margin-bottom: 1.5rem;
   line-height: 1.2;
   max-width: 700px;
@@ -78,8 +78,8 @@ const CTAButton = styled(motion.button)`
   padding: 14px 32px;
   font-size: 1rem;
   font-weight: 500;
-  background: linear-gradient(135deg, #ffd700, #ff6347); /* Gold to Tomato Red */
-  color: #fff;
+  background: linear-gradient(135deg, #D4AF37, #FF0000); /* Gold to Red */
+  color: #FFFFFF;
   border: none;
   border-radius: 30px;
   cursor: pointer;
@@ -87,11 +87,11 @@ const CTAButton = styled(motion.button)`
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
-  box-shadow: 0 4px 15px rgba(255, 99, 71, 0.3);
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 99, 71, 0.4);
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
   }
 `;
 
@@ -99,7 +99,7 @@ const DecorativeElement = styled(motion.div)`
   position: absolute;
   width: 300px;
   height: 300px;
-  border: 2px solid rgba(255, 215, 0, 0.3); /* Gold */
+  border: 2px solid rgba(212, 175, 55, 0.3); /* Gold */
   border-radius: 50%;
   right: -150px;
   top: 50%;

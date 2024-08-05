@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import { Link, useLocation } from 'react-router-dom';
 
 const HeaderContainer = styled.header`
   background: #FFFFFF;
-  padding: 15px 0;
-  position: fixed;
   width: 100%;
   z-index: 1000;
+  position: relative;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 `;
 
@@ -17,62 +16,79 @@ const Nav = styled.nav`
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 10px 20px;
 `;
 
-const Logo = styled(motion.div)`
+const Logo = styled.div`
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
-  color: #B8860B; // Dark golden color
+  color: #D4AF37;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  
+  img {
+    max-width: 150px;
+    height: auto;
+  }
 `;
 
 const MenuItems = styled.div`
   display: flex;
+  
   @media (max-width: 768px) {
+    display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
     flex-direction: column;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
     background: #FFFFFF;
-    padding: 20px 0;
-    display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   }
 `;
 
-const MenuItem = styled(motion.a)`
-  margin: 0 15px;
-  color: #8B0000; // Dark red color
+const MenuItem = styled(Link)`
+  color: #FF0000;
   text-decoration: none;
+  padding: 10px 15px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  position: relative;
   transition: color 0.3s ease;
-  
+  position: relative;
+
   &::after {
     content: '';
     position: absolute;
     width: 0;
     height: 2px;
-    bottom: -5px;
+    bottom: 0;
     left: 0;
-    background-color: #B8860B; // Dark golden color
+    background-color: #D4AF37;
     transition: width 0.3s ease;
   }
-  
-  &:hover {
-    color: #B8860B; // Dark golden color on hover
+
+  &:hover, &.active {
+    color: #D4AF37;
   }
 
-  &:hover::after {
+  &:hover::after, &.active::after {
     width: 100%;
   }
 
   @media (max-width: 768px) {
-    margin: 10px 0;
-    text-align: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eaeaea;
+    
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    &:hover, &.active {
+      background-color: rgba(212, 175, 55, 0.1);
+    }
   }
 `;
 
@@ -82,7 +98,7 @@ const MenuToggle = styled.button`
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-  color: #8B0000; // Dark red color
+  color: #FF0000;
 
   @media (max-width: 768px) {
     display: block;
@@ -91,6 +107,11 @@ const MenuToggle = styled.button`
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -99,21 +120,25 @@ function Header() {
   return (
     <HeaderContainer>
       <Nav>
-        <Logo
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          Aviv
+        <Logo>
+          <Link to="/"><img src="logo.png" alt="logo" /></Link>
         </Logo>
         <MenuToggle onClick={toggleMenu}>
           {isMenuOpen ? '✕' : '☰'}
         </MenuToggle>
         <MenuItems isOpen={isMenuOpen}>
-          <MenuItem href="#" whileHover={{ scale: 1.05 }}>Home</MenuItem>
-          <MenuItem href="#" whileHover={{ scale: 1.05 }}>About</MenuItem>
-          <MenuItem href="#" whileHover={{ scale: 1.05 }}>Products</MenuItem>
-          <MenuItem href="#" whileHover={{ scale: 1.05 }}>Contact</MenuItem>
+          <MenuItem to="/" className={location.pathname === '/' ? 'active' : ''}>
+            Home
+          </MenuItem>
+          <MenuItem to="/about" className={location.pathname === '/about' ? 'active' : ''}>
+            About
+          </MenuItem>
+          <MenuItem to="/products" className={location.pathname === '/products' ? 'active' : ''}>
+            Products
+          </MenuItem>
+          <MenuItem to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>
+            Contact
+          </MenuItem>
         </MenuItems>
       </Nav>
     </HeaderContainer>

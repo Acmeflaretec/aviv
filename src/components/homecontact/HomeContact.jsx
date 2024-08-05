@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 function HomeContact() {
   return (
@@ -22,9 +23,11 @@ function HomeContact() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <ContactButton whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              Reach Out
-            </ContactButton>
+           <Link to={'/contact'}>
+              <ContactButton whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                Reach Out
+              </ContactButton>
+           </Link>
           </motion.div>
         </ContentWrapper>
       </ContactContainer>
@@ -35,7 +38,7 @@ function HomeContact() {
 }
 
 const ContactSection = styled.section`
-  background: linear-gradient(135deg, #2c3e50, #34495e);
+  background: #f0f0f0; /* Light gray background */
   padding: 100px 0;
   position: relative;
   overflow: hidden;
@@ -51,7 +54,7 @@ const ContactContainer = styled.div`
 
 const ContentWrapper = styled.div`
   text-align: center;
-  color: #ecf0f1;
+  color: #2c3e50; /* Adjusted text color for better contrast */
 `;
 
 const Heading = styled.h2`
@@ -59,7 +62,7 @@ const Heading = styled.h2`
   font-weight: 700;
   margin-bottom: 1rem;
   font-family: 'Playfair Display', serif;
-  background: linear-gradient(45deg, #e74c3c, #f39c12);
+  background: linear-gradient(45deg, #FF0000, #D4AF37); /* Red to Gold */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `;
@@ -79,7 +82,7 @@ const ContactButton = styled(motion.button)`
   font-size: 1.1rem;
   font-weight: bold;
   color: #2c3e50;
-  background: linear-gradient(45deg, #e74c3c, #f39c12);
+  background: linear-gradient(45deg, #FF0000, #D4AF37); /* Red to Gold */
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -101,7 +104,7 @@ const BackgroundElement = styled.div`
 const BackgroundElement1 = styled(BackgroundElement)`
   width: 300px;
   height: 300px;
-  background: #e74c3c;
+  background: #FF0000; /* Red */
   top: -100px;
   left: -100px;
 `;
@@ -109,7 +112,7 @@ const BackgroundElement1 = styled(BackgroundElement)`
 const BackgroundElement2 = styled(BackgroundElement)`
   width: 200px;
   height: 200px;
-  background: #f39c12;
+  background: #D4AF37; /* Gold */
   bottom: -50px;
   right: -50px;
 `;

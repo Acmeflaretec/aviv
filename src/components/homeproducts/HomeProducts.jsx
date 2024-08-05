@@ -1,19 +1,25 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const ProductSection = styled.section`
   background: linear-gradient(135deg, #ffffff, #fff1e6);
-  padding: 4rem 2rem;
+  padding: 4rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  max-height: 100vh;
+  width: 100%;
+  
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
+  }
 `;
 
 const ProductContainer = styled(motion.div)`
   display: flex;
   max-width: 1200px;
+  width: 100%;
   background: white;
   border-radius: 20px;
   overflow: hidden;
@@ -46,7 +52,7 @@ const GoldOverlay = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, rgba(255,215,0,0.2), rgba(255,215,0,0));
+  background: linear-gradient(45deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0));
 `;
 
 const InfoSection = styled.div`
@@ -63,7 +69,7 @@ const InfoSection = styled.div`
 
 const ProductName = styled.h2`
   font-size: 2.5rem;
-  color: #8B0000;
+  color: #FF0000; /* Red */
   margin-bottom: 1rem;
 
   @media (max-width: 768px) {
@@ -84,12 +90,12 @@ const ProductDescription = styled.p`
 
 const ProductPrice = styled.span`
   font-size: 1.5rem;
-  color: #8B0000;
+  color: #FF0000; /* Red */
   font-weight: bold;
 `;
 
 const BuyButton = styled(motion.button)`
-  background: linear-gradient(45deg, #8B0000, #FF4500);
+  background: linear-gradient(45deg, #D4AF37, #FF0000); /* Gold to Red */
   color: white;
   border: none;
   padding: 1rem 2rem;
@@ -98,6 +104,11 @@ const BuyButton = styled(motion.button)`
   cursor: pointer;
   margin-top: 2rem;
   align-self: flex-start;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
+  }
 `;
 
 const ProductGrid = styled.div`
@@ -128,7 +139,7 @@ const CardInfo = styled.div`
 
 const CardName = styled.h3`
   font-size: 1.2rem;
-  color: #8B0000;
+  color: #FF0000; /* Red */
   margin-bottom: 0.5rem;
 `;
 
@@ -142,10 +153,10 @@ const CardPrice = styled.span`
 const products = [
   {
     id: 1,
-    name: "Ethereal Glow Elixir",
-    description: "Indulge in the magic of our Ethereal Glow Elixir, a luxurious blend of rare botanical oils. This transformative serum nourishes your skin with radiance, leaving it soft, supple, and illuminated. Infused with golden particles, it imparts a subtle, celestial shimmer for a truly ethereal glow.",
-    price: 129.99,
-    image: "https://img.freepik.com/free-photo/front-view-oil-made-from-green-plant_23-2148799508.jpg?w=740&t=st=1722674772~exp=1722675372~hmac=5710cbd08290c2120e8001d3f3292c63ebc907c2a5ed8e44cef971b8ffff1478"
+    name: "Tresses Hair Oil",
+    description: "Unlock the secret to healthy, beautiful hair with Tresses Hair Oil, designed for intense growth and dandruff control. This ayurvedic formula features 44 powerful herbs, including Chaulmoogra and Vetiver, to nourish your scalp and strengthen your hair. Experience the natural benefits of Ayurveda and transform your hair into a symbol of strength and vitality with Tresses.",
+    price: 320,
+    image: "product1.jpeg"
   }
   // Add more products here if needed
 ];
@@ -164,15 +175,17 @@ function HomeProducts() {
         <GoldOverlay />
       </ImageSection>
       <InfoSection>
-        <ProductName>{selectedProduct.name}</ProductName>
+        <ProductName className='text-start'>{selectedProduct.name}</ProductName>
         <ProductDescription>{selectedProduct.description}</ProductDescription>
-        <ProductPrice>${selectedProduct.price.toFixed(2)}</ProductPrice>
-        <BuyButton
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Experience the Glow
-        </BuyButton>
+        <ProductPrice>₹{selectedProduct.price.toFixed(2)}</ProductPrice>
+       <Link to={'/products'}>
+          <BuyButton
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Buy Now
+          </BuyButton>
+       </Link>
       </InfoSection>
     </ProductContainer>
   );

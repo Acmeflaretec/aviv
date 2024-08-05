@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 function HomeBanner() {
   return (
@@ -11,13 +12,15 @@ function HomeBanner() {
         transition={{ duration: 0.8 }}
       >
         <CardContent>
-          <CardTitle>Ethereal Glow</CardTitle>
+          <CardTitle className='text-start'>Ethereal Glow</CardTitle>
           <CardText>
             Unveil your inner radiance with our signature collection of illuminating elixirs.
           </CardText>
-          <CardButton whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            Discover Magic
-          </CardButton>
+          <Link to={'/products'}>
+            <CardButton whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              Discover Magic
+            </CardButton>
+          </Link>
         </CardContent>
         <CardImage src="https://img.freepik.com/free-vector/makeup-realistic-composition_1284-18448.jpg?t=st=1722674853~exp=1722678453~hmac=a0b724d2b899294594af61ab31a57db906151010fa3291a245f614c22aca1f89&w=826" alt="Glowing skin" />
       </LargeCard>
@@ -33,9 +36,11 @@ function HomeBanner() {
             <SmallCardText>
               Botanical blends for timeless beauty.
             </SmallCardText>
-            <SmallCardButton whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              Explore
-            </SmallCardButton>
+           <Link to={'/products'}>
+              <SmallCardButton whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                Explore
+              </SmallCardButton>
+           </Link>
           </SmallCardContent>
         </SmallCard>
         
@@ -49,9 +54,11 @@ function HomeBanner() {
             <SmallCardText>
               Nighttime renewal for your skin.
             </SmallCardText>
-            <SmallCardButton whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              Discover
-            </SmallCardButton>
+           <Link to={'/products'}>
+              <SmallCardButton whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                Discover
+              </SmallCardButton>
+           </Link>
           </SmallCardContent>
         </SmallCard>
       </SmallCardsContainer>
@@ -63,7 +70,7 @@ const BannerContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 40px;
+  padding: 15px;
   background: linear-gradient(135deg, #f6e5f5, #fff0f5);
 
   @media (min-width: 1024px) {
@@ -97,7 +104,7 @@ const CardContent = styled.div`
 
 const CardTitle = styled.h2`
   font-size: 2.5rem;
-  color: #8A2BE2;
+  color: #FF0000; /* Red */
   margin-bottom: 1rem;
   font-family: 'Playfair Display', serif;
 `;
@@ -115,7 +122,7 @@ const CardButton = styled(motion.button)`
   font-size: 1rem;
   font-weight: bold;
   color: white;
-  background: linear-gradient(45deg, #FF1493, #FF69B4);
+  background: linear-gradient(45deg, #FF0000, #D4AF37); /* Red to Gold */
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -159,7 +166,7 @@ const SmallCardContent = styled.div`
 
 const SmallCardTitle = styled.h3`
   font-size: 1.8rem;
-  color: #FF69B4;
+  color: #D4AF37; /* Gold */
   margin-bottom: 0.5rem;
   font-family: 'Playfair Display', serif;
 `;
@@ -176,7 +183,7 @@ const SmallCardButton = styled(motion.button)`
   font-size: 0.9rem;
   font-weight: bold;
   color: white;
-  background: linear-gradient(45deg, #8A2BE2, #9370DB);
+  background: linear-gradient(45deg, #FF0000, #D4AF37); /* Red to Gold */
   border: none;
   border-radius: 50px;
   cursor: pointer;
