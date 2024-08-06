@@ -3,18 +3,21 @@ import Header from '../../components/header/Header';
 import Footer from '../../components/footer/Footer';
 import './About.css';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const About = () => {
   return (
     <div className="about-page">
       <Header />
-      <main className="about-main">
-        <section className="hero-section">
-          <div className="hero-content">
-            <h1>About Our Brand</h1>
-            <div className="decorative-line"></div>
-          </div>
-        </section>
+      <main className="about-main py-5">
+      <motion.h1 
+            className="text-center mb-5 page-title"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            About Us
+          </motion.h1>
 
         <section className="story-section">
           <div className="container">

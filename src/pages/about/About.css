@@ -11,11 +11,10 @@
     color: var(--dark-grey);
   }
     
-  .hero-section {
-    background-image: url('commonbanner.jpg');
+  /* .hero-section {
     background-size: cover;
     background-position: center;
-    height: 40vh;
+    height: 15vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,7 +34,7 @@
     height: 2px;
     background-color: var(--gold);
     margin: 0 auto;
-  }
+  } */
   
   .container {
     max-width: 1200px;

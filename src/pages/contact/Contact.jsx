@@ -3,6 +3,7 @@ import Header from '../../components/header/Header';
 import Footer from '../../components/footer/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const ContactWrapper = styled.div`
   background-color: #f8f9fa;
@@ -55,13 +56,15 @@ function Contact() {
   return (
     <div>
       <Header />
-      <ContactWrapper>
-        <section className="hero-section">
-          <div className="hero-content">
-            <h1>Contact</h1>
-            <div className="decorative-line"></div>
-          </div>
-        </section>
+      <ContactWrapper className='py-5'>
+      <motion.h1 
+            className="text-center mb-5 page-title"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            Contact
+          </motion.h1>
         <div className="container">
           <div className="row">
             <div className="col-lg-6 mb-4 mb-lg-0">
