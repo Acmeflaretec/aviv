@@ -71,7 +71,7 @@ const Subheading = styled.p`
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 2rem;
-  font-family: 'Lato', sans-serif;
+  font-family: "Quicksand", sans-serif;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -81,13 +81,13 @@ const ContactButton = styled(motion.button)`
   padding: 15px 40px;
   font-size: 1.1rem;
   font-weight: bold;
-  color: #2c3e50;
+  color: white;
   background: linear-gradient(45deg, #FF0000, #D4AF37); /* Red to Gold */
   border: none;
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-family: 'Montserrat', sans-serif;
+   font-family: "Quicksand", sans-serif;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 
   &:hover {

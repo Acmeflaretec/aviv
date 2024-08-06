@@ -12,7 +12,7 @@ const HomeAbout = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-          <Heading>Embrace Natural Beauty</Heading>
+          <Heading className='text-start'>Embrace Natural Beauty</Heading>
           <Subtitle>Empowerment Through Sustainable Skincare</Subtitle>
           <Description>
               Welcome to AVIV where beauty meets nature. We are a cosmetic company dedicated to providing high-quality, natural, and sustainable products that nourish and enhance your beauty. Our mission is to empower individuals to embrace their unique beauty while promoting a healthier planet.
@@ -90,7 +90,7 @@ const Subtitle = styled.h3`
   font-size: 1.5rem;
   color: #D4AF37; /* Gold */
   margin-bottom: 1.5rem;
-  font-family: 'Montserrat', sans-serif;
+   font-family: "Quicksand", sans-serif;
 `;
 
 const Description = styled.p`
@@ -98,7 +98,7 @@ const Description = styled.p`
   color: #4A4A4A;
   line-height: 1.8;
   margin-bottom: 2.5rem;
-  font-family: 'Lato', sans-serif;
+   font-family: "Quicksand", sans-serif;
 `;
 
 const Stats = styled.div`
@@ -115,13 +115,13 @@ const StatNumber = styled.div`
   font-size: 2.5rem;
   font-weight: bold;
   color: #FF0000; /* Red */
-  font-family: 'Playfair Display', serif;
+  font-family: "Quicksand", sans-serif;
 `;
 
 const StatLabel = styled.div`
   font-size: 1rem;
   color: #4A4A4A;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Quicksand", sans-serif;
 `;
 
 const ImageGrid = styled.div`
@@ -146,7 +146,7 @@ const statsData = [
 
 const imageData = [
   { src: 'https://cdn.pixabay.com/photo/2019/03/19/09/26/essential-oil-4065187_640.jpg', alt: 'Rare botanical ingredients' },
-  { src: 'https://cdn.pixabay.com/photo/2016/07/24/22/48/essential-oils-1539457_640.jpg', alt: 'Luxury skincare product' },
+  { src: 'https://img.freepik.com/free-photo/cosmetic-bottles-stones-light-background_185193-162140.jpg?ga=GA1.1.1794837574.1691059421&semt=ais_hybrid' },
   { src: 'https://cdn.pixabay.com/photo/2019/02/18/17/26/natural-cosmetics-4004909_1280.jpg', alt: 'Woman with glowing skin' },
   { src: 'https://cdn.pixabay.com/photo/2016/06/03/16/03/essential-oils-1433694_640.jpg', alt: 'Advanced skincare research' },
 ];

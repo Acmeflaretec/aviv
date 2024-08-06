@@ -19,9 +19,9 @@ const About = () => {
         <section className="story-section">
           <div className="container">
             <h2>Our Story</h2>
-            <div className="story-content">
+            <div className="story-content text-start">
               <p>
-              Welcome to AVIVwhere beauty meets nature. We are a cosmetic company dedicated to providing high-quality, natural, and sustainable products that nourish and enhance your beauty. Our mission is to empower individuals to embrace their unique beauty while promoting a healthier planet.
+              Welcome to AVIV where beauty meets nature. We are a cosmetic company dedicated to providing high-quality, natural, and sustainable products that nourish and enhance your beauty. Our mission is to empower individuals to embrace their unique beauty while promoting a healthier planet.
               </p>
               <p>
               Our products are crafted with love and care, using only the finest, cruelty-free ingredients sourced from nature. From skincare to haircare, our range is designed to cater to diverse needs and preferences. We believe in transparency, so you can trust what you put on your skin.
@@ -43,7 +43,7 @@ const About = () => {
               <div className="value-card">
                 <div className="value-icon">✦</div>
                 <h3>Innovation</h3>
-                <p>Our team of experts continuously pushes the boundaries of cosmetic science.</p>
+                <p>Our team of experts continuously push the boundaries of cosmetic science.</p>
               </div>
               <div className="value-card">
                 <div className="value-icon">❖</div>

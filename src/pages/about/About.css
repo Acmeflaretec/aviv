@@ -12,14 +12,14 @@
   }
     
   .hero-section {
-    background-image: url('https://img.freepik.com/free-psd/cosmetics-cream-jar-with-tube-icon-isolated-3d-render-illustration_47987-11649.jpg?w=826&t=st=1722840124~exp=1722840724~hmac=b8b853d318f61d1528dbcebc5992e04104b6bb81c068ca5fe7e118e6155f86c4');
+    background-image: url('commonbanner.jpg');
     background-size: cover;
     background-position: center;
     height: 40vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--off-white);
+    color: black;
     text-align: center;
     
   }

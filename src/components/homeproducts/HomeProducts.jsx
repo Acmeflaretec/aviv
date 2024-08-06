@@ -100,6 +100,7 @@ const BuyButton = styled(motion.button)`
   border: none;
   padding: 1rem 2rem;
   font-size: 1.1rem;
+  font-weight: bold;
   border-radius: 50px;
   cursor: pointer;
   margin-top: 2rem;
@@ -154,7 +155,7 @@ const products = [
   {
     id: 1,
     name: "Tresses Hair Oil",
-    description: "Unlock the secret to healthy, beautiful hair with Tresses Hair Oil, designed for intense growth and dandruff control. This ayurvedic formula features 44 powerful herbs, including Chaulmoogra and Vetiver, to nourish your scalp and strengthen your hair. Experience the natural benefits of Ayurveda and transform your hair into a symbol of strength and vitality with Tresses.",
+    description: "Unlock the secret to healthy, beautiful hair with Tresses Hair Oil, designed for intense growth and dandruff control. ",
     price: 320,
     image: "product1.jpeg"
   }
@@ -178,12 +179,12 @@ function HomeProducts() {
         <ProductName className='text-start'>{selectedProduct.name}</ProductName>
         <ProductDescription>{selectedProduct.description}</ProductDescription>
         <ProductPrice>₹{selectedProduct.price.toFixed(2)}</ProductPrice>
-       <Link to={'/products'}>
+       <Link to={'/productdetails'}>
           <BuyButton
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Buy Now
+            Know More
           </BuyButton>
        </Link>
       </InfoSection>
@@ -221,3 +222,4 @@ function HomeProducts() {
 }
 
 export default HomeProducts;
+

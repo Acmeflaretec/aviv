@@ -4,10 +4,12 @@ import { motion } from 'framer-motion';
 import Header from '../../components/header/Header';
 import Footer from '../../components/footer/Footer';
 import './Product.css';
+import { useNavigate } from 'react-router-dom';
 
 function Product() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate()
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -27,10 +29,8 @@ function Product() {
     fetchProducts();
   }, []);
 
-  const handleWhatsAppClick = (productName) => {
-    const message = encodeURIComponent(`Hi, I'm interested in ${productName}. Can you provide more information?`);
-    const whatsappURL = `https://wa.me/1234567890?text=${message}`;
-    window.open(whatsappURL, '_blank');
+  const handleWhatsAppClick = () => {
+    navigate('/productdetails')
   };
 
   const containerVariants = {
@@ -99,10 +99,11 @@ function Product() {
                           <Button 
                             variant="success" 
                             className="mt-auto whatsapp-button"
-                            onClick={() => handleWhatsAppClick(product.name)}
+                            onClick={handleWhatsAppClick}
                           >
-                            <i className="fab fa-whatsapp me-2"></i>
-                            Contact on WhatsApp
+                            {/* <i className="fab fa-whatsapp me-2"></i>
+                            Contact on WhatsApp */}
+                            Know More
                           </Button>
                         </Card.Body>
                       </Card>

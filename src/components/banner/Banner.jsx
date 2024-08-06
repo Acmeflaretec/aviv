@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const BannerContainer = styled.div`
-  height: 100vh;
+  height: 80vh;
   width: 100%;
-  background-image: url('https://img.freepik.com/free-photo/makeup-cosmetic-beauty-products-pink-background_23-2148113421.jpg?w=996&t=st=1722577611~exp=1722578211~hmac=373a5a80486b70ffe7991d4a2a7644fd9795e5ba85b0771b1a02ad930fe0b02b');
+  background-image: url('banner.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -41,7 +42,7 @@ const ContentWrapper = styled.div`
 `;
 
 const Tag = styled(motion.p)`
-  font-family: 'Montserrat', sans-serif;
+   font-family: "Quicksand", sans-serif;
   font-size: 1rem;
   font-weight: 500;
   letter-spacing: 3px;
@@ -66,7 +67,7 @@ const Title = styled(motion.h1)`
 `;
 
 const Subtitle = styled(motion.p)`
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 1.1rem;
   color: #555;
   margin-bottom: 2.5rem;
@@ -84,7 +85,7 @@ const CTAButton = styled(motion.button)`
   border-radius: 30px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-family: 'Montserrat', sans-serif;
+   font-family: "Quicksand", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
@@ -133,15 +134,17 @@ function Banner() {
         >
           Made using clean, non-toxic ingredients, our products are designed to enhance your natural beauty and fit seamlessly into your lifestyle.
         </Subtitle>
-        <CTAButton
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          Shop Now
-        </CTAButton>
+       <Link to={'/products'}>
+          <CTAButton
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+          >
+            Shop Now
+          </CTAButton>
+       </Link>
       </ContentWrapper>
       <DecorativeElement
         initial={{ opacity: 0, scale: 0.8 }}

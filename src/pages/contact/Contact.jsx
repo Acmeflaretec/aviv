@@ -6,7 +6,6 @@ import styled from 'styled-components';
 
 const ContactWrapper = styled.div`
   background-color: #f8f9fa;
-  padding: 80px 0;
 `;
 
 const ContactHeading = styled.h1`
@@ -15,14 +14,14 @@ const ContactHeading = styled.h1`
   margin-bottom: 2rem;
   position: relative;
   
-  &:after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 3px;
-    background-color: #e74c3c;
-    margin: 15px auto 0;
-  }
+  // &:after {
+  //   content: '';
+  //   display: block;
+  //   width: 50px;
+  //   height: 3px;
+  //   background-color: #e74c3c;
+  //   margin: 15px auto 0;
+  // }
 `;
 
 const ContactInfo = styled.div`
@@ -57,20 +56,25 @@ function Contact() {
     <div>
       <Header />
       <ContactWrapper>
+        <section className="hero-section">
+          <div className="hero-content">
+            <h1>Contact</h1>
+            <div className="decorative-line"></div>
+          </div>
+        </section>
         <div className="container">
-          <ContactHeading className="text-center">Contact Us</ContactHeading>
           <div className="row">
             <div className="col-lg-6 mb-4 mb-lg-0">
-              <ContactInfo>
+              <ContactInfo className='text-start'>
                 <h4 className="mb-4">Get in Touch</h4>
-                <p>
+                <p className='text-start'>
                   We'd love to hear from you! If you have any questions or need assistance, 
                   please don't hesitate to reach out.
                 </p>
-                <ul className="list-unstyled">
-                  <li className="mb-3">
-                    <i className="bi bi-geo-alt-fill me-2 text-danger"></i> 
-                    123 Beauty Lane, Glow City, BC 12345
+                <ul className="list-unstyled ">
+                  <li className="mb-3 text-start">
+                  <i className="bi bi-geo-alt-fill me-2 text-danger"></i>
+                  123 Beauty Lane, Glow City, BC 12345
                   </li>
                   <li className="mb-3">
                     <i className="bi bi-envelope-fill me-2 text-danger"></i> 

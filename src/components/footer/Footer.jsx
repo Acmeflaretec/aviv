@@ -30,14 +30,14 @@ function Footer() {
         <FooterSection>
           <FooterHeading>Quick Links</FooterHeading>
           <nav>
-            <FooterLink href="#">Home</FooterLink>
-            <FooterLink href="#">Products</FooterLink>
-            <FooterLink href="#">About Us</FooterLink>
-            <FooterLink href="#">Contact</FooterLink>
+            <FooterLink href="/">Home</FooterLink>
+            <FooterLink href="/products">Products</FooterLink>
+            <FooterLink href="/about">About Us</FooterLink>
+            <FooterLink href="/contact">Contact</FooterLink>
           </nav>
         </FooterSection>
 
-        <FooterSection>
+        {/* <FooterSection>
           <FooterHeading>Customer Care</FooterHeading>
           <nav>
             <FooterLink href="#">FAQ</FooterLink>
@@ -45,7 +45,7 @@ function Footer() {
             <FooterLink href="#">Privacy Policy</FooterLink>
             <FooterLink href="#">Terms & Conditions</FooterLink>
           </nav>
-        </FooterSection>
+        </FooterSection> */}
 
         <FooterSection>
           <FooterHeading>Newsletter</FooterHeading>

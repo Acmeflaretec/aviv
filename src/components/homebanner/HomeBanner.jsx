@@ -12,17 +12,17 @@ function HomeBanner() {
         transition={{ duration: 0.8 }}
       >
         <CardContent>
-          <CardTitle className='text-start'>Ethereal Glow</CardTitle>
+          <CardTitle className='text-start'>Embrace Natural Beauty</CardTitle>
           <CardText>
-            Unveil your inner radiance with our signature collection of illuminating elixirs.
+            Discover our signature collection of nature-inspired skincare products.
           </CardText>
           <Link to={'/products'}>
             <CardButton whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              Discover Magic
+              Explore Our Products
             </CardButton>
           </Link>
         </CardContent>
-        <CardImage src="https://img.freepik.com/free-vector/makeup-realistic-composition_1284-18448.jpg?t=st=1722674853~exp=1722678453~hmac=a0b724d2b899294594af61ab31a57db906151010fa3291a245f614c22aca1f89&w=826" alt="Glowing skin" />
+        <CardImage src="product1.jpeg" alt="Natural skincare products" />
       </LargeCard>
       
       <SmallCardsContainer>
@@ -32,15 +32,15 @@ function HomeBanner() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <SmallCardContent>
-            <SmallCardTitle>Nature's Essence</SmallCardTitle>
+            <SmallCardTitle>Herbal Infusions</SmallCardTitle>
             <SmallCardText>
-              Botanical blends for timeless beauty.
+              Harness the power of botanicals for timeless beauty.
             </SmallCardText>
-           <Link to={'/products'}>
+            <Link to={'/products'}>
               <SmallCardButton whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                Explore
+                Discover More
               </SmallCardButton>
-           </Link>
+            </Link>
           </SmallCardContent>
         </SmallCard>
         
@@ -50,15 +50,15 @@ function HomeBanner() {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <SmallCardContent>
-            <SmallCardTitle>Lunar Rituals</SmallCardTitle>
+            <SmallCardTitle>Nightly Rejuvenation</SmallCardTitle>
             <SmallCardText>
-              Nighttime renewal for your skin.
+              Revitalize your skin with our nourishing night care rituals.
             </SmallCardText>
-           <Link to={'/products'}>
+            <Link to={'/products'}>
               <SmallCardButton whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                Discover
+                Learn More
               </SmallCardButton>
-           </Link>
+            </Link>
           </SmallCardContent>
         </SmallCard>
       </SmallCardsContainer>
@@ -113,7 +113,7 @@ const CardText = styled.p`
   font-size: 1.1rem;
   color: #4A4A4A;
   margin-bottom: 1.5rem;
-  font-family: 'Lato', sans-serif;
+  font-family: "Quicksand", sans-serif;
   line-height: 1.6;
 `;
 
@@ -127,7 +127,7 @@ const CardButton = styled(motion.button)`
   border-radius: 50px;
   cursor: pointer;
   align-self: flex-start;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Quicksand", sans-serif;
 `;
 
 const CardImage = styled.img`
@@ -175,7 +175,7 @@ const SmallCardText = styled.p`
   font-size: 1rem;
   color: #4A4A4A;
   margin-bottom: 1rem;
-  font-family: 'Lato', sans-serif;
+  font-family: "Quicksand", sans-serif;
 `;
 
 const SmallCardButton = styled(motion.button)`
@@ -187,7 +187,7 @@ const SmallCardButton = styled(motion.button)`
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Quicksand", sans-serif;
 `;
 
 export default HomeBanner;
