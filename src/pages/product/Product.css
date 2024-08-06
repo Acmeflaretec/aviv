@@ -41,11 +41,23 @@
 }
 
 .whatsapp-button {
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  background: linear-gradient(135deg, #D4AF37, #FF0000); /* Gold to Red */
+  color: #FFFFFF;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+   font-family: "Quicksand", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
 }
 
 .whatsapp-button:hover {
-  background-color: #25d366;
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
 }
 

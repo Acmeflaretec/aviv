@@ -30,10 +30,18 @@ function Footer() {
         <FooterSection>
           <FooterHeading>Quick Links</FooterHeading>
           <nav>
-            <FooterLink href="/">Home</FooterLink>
-            <FooterLink href="/products">Products</FooterLink>
-            <FooterLink href="/about">About Us</FooterLink>
-            <FooterLink href="/contact">Contact</FooterLink>
+            <Link to={'/'} className='text-decoration-none'>
+            <FooterLink>Home</FooterLink>
+            </Link>
+            <Link to={'/products'} className='text-decoration-none'>
+            <FooterLink>Products</FooterLink>
+            </Link>
+           <Link to={'/about'} className='text-decoration-none'> 
+           <FooterLink>About Us</FooterLink>
+           </Link>
+          <Link to={'/contact'} className='text-decoration-none'> 
+           <FooterLink>Contact</FooterLink>
+           </Link>
           </nav>
         </FooterSection>
 
