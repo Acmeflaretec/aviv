@@ -71,7 +71,7 @@ const BannerContainer = styled.div`
   flex-direction: column;
   gap: 20px;
   padding: 15px;
-  background: linear-gradient(135deg, #f6e5f5, #fff0f5);
+  background: linear-gradient(135deg, #ffffff, #f8d7da); /* White to Baby Pink */
 
   @media (min-width: 1024px) {
     flex-direction: row;
@@ -104,7 +104,7 @@ const CardContent = styled.div`
 
 const CardTitle = styled.h2`
   font-size: 2.5rem;
-  color: #FF0000; /* Red */
+  color: #000000; /* Black */
   margin-bottom: 1rem;
   font-family: 'Playfair Display', serif;
 `;
@@ -122,7 +122,7 @@ const CardButton = styled(motion.button)`
   font-size: 1rem;
   font-weight: bold;
   color: white;
-  background: linear-gradient(45deg, #FF0000, #D4AF37); /* Red to Gold */
+  background: #921A40; /* Deep Wine */
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -166,7 +166,7 @@ const SmallCardContent = styled.div`
 
 const SmallCardTitle = styled.h3`
   font-size: 1.8rem;
-  color: #D4AF37; /* Gold */
+  color: #000000; /* Black */
   margin-bottom: 0.5rem;
   font-family: 'Playfair Display', serif;
 `;
@@ -183,7 +183,7 @@ const SmallCardButton = styled(motion.button)`
   font-size: 0.9rem;
   font-weight: bold;
   color: white;
-  background: linear-gradient(45deg, #FF0000, #D4AF37); /* Red to Gold */
+  background: #921A40; /* Deep Wine */
   border: none;
   border-radius: 50px;
   cursor: pointer;

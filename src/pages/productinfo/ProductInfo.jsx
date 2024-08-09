@@ -139,7 +139,7 @@ function ProductInfo() {
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent(`Hi, I'm interested in ${product.name}. Can you provide more information?`);
-    const whatsappURL = `https://wa.me/1234567890?text=${message}`;
+    const whatsappURL = `https://wa.me/+917511140081?text=${message}`;
     window.open(whatsappURL, '_blank');
   };
 

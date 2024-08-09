@@ -40,7 +40,7 @@ const ContactForm = styled.form`
 `;
 
 const SubmitButton = styled.button`
-  background-color: #e74c3c;
+  background-color: #921A40;
   border: none;
   padding: 10px 20px;
   color: white;
@@ -48,7 +48,8 @@ const SubmitButton = styled.button`
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: #c0392b;
+    background-color: #921A40;
+    color:white;
   }
 `;
 
@@ -77,15 +78,17 @@ function Contact() {
                 <ul className="list-unstyled ">
                   <li className="mb-3 text-start">
                   <i className="bi bi-geo-alt-fill me-2 text-danger"></i>
-                  123 Beauty Lane, Glow City, BC 12345
+                  Ayyanthole,
+                  Thrissur 
+                  680003
                   </li>
                   <li className="mb-3">
                     <i className="bi bi-envelope-fill me-2 text-danger"></i> 
-                    info@beautyglow.com
+                    example.email.com
                   </li>
                   <li className="mb-3">
                     <i className="bi bi-telephone-fill me-2 text-danger"></i> 
-                    +1 (234) 567-8900
+                    7511140081
                   </li>
                 </ul>
               </ContactInfo>

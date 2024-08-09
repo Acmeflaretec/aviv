@@ -23,11 +23,11 @@ function HomeContact() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-           <Link to={'/contact'}>
+            <Link to={'/contact'}>
               <ContactButton whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 Reach Out
               </ContactButton>
-           </Link>
+            </Link>
           </motion.div>
         </ContentWrapper>
       </ContactContainer>
@@ -38,7 +38,7 @@ function HomeContact() {
 }
 
 const ContactSection = styled.section`
-  background: #f0f0f0; /* Light gray background */
+  background: linear-gradient(135deg, #ffffff, #f8d7da); /* White to Baby Pink */
   padding: 100px 0;
   position: relative;
   overflow: hidden;
@@ -62,9 +62,7 @@ const Heading = styled.h2`
   font-weight: 700;
   margin-bottom: 1rem;
   font-family: 'Playfair Display', serif;
-  background: linear-gradient(45deg, #FF0000, #D4AF37); /* Red to Gold */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #000000; /* Black */
 `;
 
 const Subheading = styled.p`
@@ -82,12 +80,12 @@ const ContactButton = styled(motion.button)`
   font-size: 1.1rem;
   font-weight: bold;
   color: white;
-  background: linear-gradient(45deg, #FF0000, #D4AF37); /* Red to Gold */
+  background: #921A40; /* Deep Wine */
   border: none;
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
-   font-family: "Quicksand", sans-serif;
+  font-family: "Quicksand", sans-serif;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 
   &:hover {

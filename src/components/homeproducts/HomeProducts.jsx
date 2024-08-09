@@ -4,13 +4,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 const ProductSection = styled.section`
-  background: linear-gradient(135deg, #ffffff, #fff1e6);
+  background: #f8d7da; /* Baby Pink */
   padding: 4rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  
+
   @media (max-width: 768px) {
     padding: 2rem 1rem;
   }
@@ -69,7 +69,7 @@ const InfoSection = styled.div`
 
 const ProductName = styled.h2`
   font-size: 2.5rem;
-  color: #FF0000; /* Red */
+  color: #000000; /* Black */
   margin-bottom: 1rem;
 
   @media (max-width: 768px) {
@@ -90,12 +90,12 @@ const ProductDescription = styled.p`
 
 const ProductPrice = styled.span`
   font-size: 1.5rem;
-  color: #FF0000; /* Red */
+  color: #000000; /* Black */
   font-weight: bold;
 `;
 
 const BuyButton = styled(motion.button)`
-  background: linear-gradient(45deg, #D4AF37, #FF0000); /* Gold to Red */
+  background: #921A40; /* Dark Burgundy */
   color: white;
   border: none;
   padding: 1rem 2rem;
@@ -105,10 +105,11 @@ const BuyButton = styled(motion.button)`
   cursor: pointer;
   margin-top: 2rem;
   align-self: flex-start;
+  transition: all 0.3s ease;
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
+    box-shadow: 0 6px 20px rgba(146, 26, 64, 0.4);
   }
 `;
 
@@ -140,7 +141,7 @@ const CardInfo = styled.div`
 
 const CardName = styled.h3`
   font-size: 1.2rem;
-  color: #FF0000; /* Red */
+  color: #000000; /* Black */
   margin-bottom: 0.5rem;
 `;
 
@@ -155,7 +156,7 @@ const products = [
   {
     id: 1,
     name: "Tresses Hair Oil",
-    description: "Unlock the secret to healthy, beautiful hair with Tresses Hair Oil, designed for intense growth and dandruff control. ",
+    description: "Unlock the secret to healthy, beautiful hair with Tresses Hair Oil, designed for intense growth and dandruff control.",
     price: 320,
     image: "product1.jpeg"
   }
@@ -179,14 +180,14 @@ function HomeProducts() {
         <ProductName className='text-start'>{selectedProduct.name}</ProductName>
         <ProductDescription>{selectedProduct.description}</ProductDescription>
         <ProductPrice>₹{selectedProduct.price.toFixed(2)}</ProductPrice>
-       <Link to={'/productdetails'}>
+        <Link to={'/productdetails'}>
           <BuyButton
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             Know More
           </BuyButton>
-       </Link>
+        </Link>
       </InfoSection>
     </ProductContainer>
   );
@@ -205,7 +206,7 @@ function HomeProducts() {
           <CardImage src={product.image} alt={product.name} />
           <CardInfo>
             <CardName>{product.name}</CardName>
-            <CardPrice>${product.price.toFixed(2)}</CardPrice>
+            <CardPrice>₹{product.price.toFixed(2)}</CardPrice>
           </CardInfo>
         </ProductCard>
       ))}
@@ -222,4 +223,3 @@ function HomeProducts() {
 }
 
 export default HomeProducts;
-

@@ -1,146 +1,142 @@
 :root {
-    --deep-red: #8B0000;
-    --light-red: #FF6B6B;
-    --gold: #D4AF37;
-    --off-white: #F9F9F9;
-    --dark-grey: #333333;
-  }
-  
-  .about-page {
-    background-color: var(--off-white);
-    color: var(--dark-grey);
-  }
-    
-  /* .hero-section {
-    background-size: cover;
-    background-position: center;
-    height: 15vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: black;
-    text-align: center;
-    
-  }
-  
+  --baby-pink: #FFC0CB; /* Baby pink */
+  --light-pink: #FFB6C1; /* Light pink */
+  --dark-pink: #D05C7F; /* Dark pink */
+  --gold: #E5C100; /* Gold */
+  --off-white: #F9F9F9; /* Off-white */
+  --dark-grey: #333333; /* Dark grey */
+}
+
+.about-page {
+  background-color: var(--off-white);
+  color: var(--dark-grey);
+}
+
+.hero-section {
+  background-color: var(--baby-pink); /* Baby pink for background */
+  color: var(--dark-grey);
+  text-align: center;
+}
+
+.hero-content h1 {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--dark-pink); /* Dark pink text color */
+}
+
+.decorative-line {
+  width: 100px;
+  height: 2px;
+  background-color: var(--gold); /* Gold line */
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: var(--dark-pink); /* Dark pink headings */
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.story-section, .values-section {
+  background-color: var(--off-white); /* Off-white background */
+}
+
+.story-content {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.story-content p {
+  margin-bottom: 1.5rem;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.value-card {
+  background-color: var(--light-pink); /* Light pink background */
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+}
+
+.value-icon {
+  font-size: 2.5rem;
+  color: var(--gold); /* Gold icons */
+  margin-bottom: 1rem;
+}
+
+.value-card h3 {
+  font-size: 1.5rem;
+  color: var(--dark-pink); /* Dark pink text for cards */
+  margin-bottom: 1rem;
+}
+
+.cta-section {
+  background-color: var(--dark-pink); /* Dark pink CTA section */
+  color: var(--off-white);
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.cta-section h2 {
+  color: var(--off-white); /* Off-white CTA heading */
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--gold); /* Gold CTA button */
+  color: var(--dark-pink);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #E5C100; /* Slightly different shade for hover */
+}
+
+@media (max-width: 768px) {
   .hero-content h1 {
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-  
-  .decorative-line {
-    width: 100px;
-    height: 2px;
-    background-color: var(--gold);
-    margin: 0 auto;
-  } */
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
-  }
-  
-  h2 {
-    font-size: 2.5rem;
-    color: var(--deep-red);
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .story-section, .values-section {
-    background-color: white;
-  }
-  
-  .story-content {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .story-content p {
-    margin-bottom: 1.5rem;
-  }
-  
-  .values-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-  }
-  
-  .value-card {
-    background-color: var(--off-white);
-    padding: 2rem;
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .value-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .value-icon {
-    font-size: 2.5rem;
-    color: var(--gold);
-    margin-bottom: 1rem;
-  }
-  
-  .value-card h3 {
-    font-size: 1.5rem;
-    color: var(--deep-red);
-    margin-bottom: 1rem;
-  }
-  
-  .cta-section {
-    background-color: var(--deep-red);
-    color: var(--off-white);
-    text-align: center;
-    padding: 4rem 0;
-  }
-  
-  .cta-section h2 {
-    color: var(--off-white);
-  }
-  
-  .cta-section p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .cta-button {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background-color: var(--gold);
-    color: var(--deep-red);
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .cta-button:hover {
-    background-color: #E5C100;
-  }
-  
-  @media (max-width: 768px) {
-    .hero-content h1 {
       font-size: 2.5rem;
-    }
-  
-    h2 {
-      font-size: 2rem;
-    }
-  
-    .container {
-      padding: 2rem 1rem;
-    }
-  
-    .values-grid {
-      grid-template-columns: 1fr;
-    }
   }
+
+  h2 {
+      font-size: 2rem;
+  }
+
+  .container {
+      padding: 2rem 1rem;
+  }
+
+  .values-grid {
+      grid-template-columns: 1fr;
+  }
+}

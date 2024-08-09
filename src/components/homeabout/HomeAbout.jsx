@@ -12,12 +12,11 @@ const HomeAbout = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-          <Heading className='text-start'>Embrace Natural Beauty</Heading>
-          <Subtitle>Empowerment Through Sustainable Skincare</Subtitle>
-          <Description>
-              Welcome to AVIV where beauty meets nature. We are a cosmetic company dedicated to providing high-quality, natural, and sustainable products that nourish and enhance your beauty. Our mission is to empower individuals to embrace their unique beauty while promoting a healthier planet.
-          </Description>
-
+            <Heading className='text-start'>Embrace Natural Beauty</Heading>
+            <Subtitle>Empowerment Through Sustainable Skincare</Subtitle>
+            <Description>
+              Welcome to AVIV, where beauty meets nature. We are a cosmetic company dedicated to providing high-quality, natural, and sustainable products that nourish and enhance your beauty. Our mission is to empower individuals to embrace their unique beauty while promoting a healthier planet.
+            </Description>
           </motion.div>
           <Stats>
             {statsData.map((stat, index) => (
@@ -54,7 +53,7 @@ const HomeAbout = () => {
 };
 
 const AboutSection = styled.section`
-  background: linear-gradient(135deg, #ffffff, #fff5e6);
+  background: linear-gradient(135deg, #ffffff, #f8d7da); /* White to Baby Pink */
   padding: 100px 0;
 `;
 
@@ -81,16 +80,16 @@ const RightColumn = styled.div`
 
 const Heading = styled.h2`
   font-size: 3rem;
-  color: #FF0000; /* Red */
+  color: #000000; /* Black */
   margin-bottom: 0.5rem;
   font-family: 'Playfair Display', serif;
 `;
 
 const Subtitle = styled.h3`
   font-size: 1.5rem;
-  color: #D4AF37; /* Gold */
+  color: #921A40; /* Deep Wine */
   margin-bottom: 1.5rem;
-   font-family: "Quicksand", sans-serif;
+  font-family: 'Quicksand', sans-serif;
 `;
 
 const Description = styled.p`
@@ -98,7 +97,7 @@ const Description = styled.p`
   color: #4A4A4A;
   line-height: 1.8;
   margin-bottom: 2.5rem;
-   font-family: "Quicksand", sans-serif;
+  font-family: 'Quicksand', sans-serif;
 `;
 
 const Stats = styled.div`
@@ -114,14 +113,14 @@ const StatItem = styled.div`
 const StatNumber = styled.div`
   font-size: 2.5rem;
   font-weight: bold;
-  color: #FF0000; /* Red */
-  font-family: "Quicksand", sans-serif;
+  color: #000000; /* Black */
+  font-family: 'Quicksand', sans-serif;
 `;
 
 const StatLabel = styled.div`
   font-size: 1rem;
   color: #4A4A4A;
-  font-family: "Quicksand", sans-serif;
+  font-family: 'Quicksand', sans-serif;
 `;
 
 const ImageGrid = styled.div`
@@ -140,13 +139,13 @@ const GridImage = styled.img`
 
 const statsData = [
   { number: '98%', label: 'Natural Ingredients' },
-  { number: '50+', label: 'Unique Formulas' },
+  // { number: '50+', label: 'Unique Formulas' },
   { number: '1M+', label: 'Happy Customers' },
 ];
 
 const imageData = [
   { src: 'https://cdn.pixabay.com/photo/2019/03/19/09/26/essential-oil-4065187_640.jpg', alt: 'Rare botanical ingredients' },
-  { src: 'https://img.freepik.com/free-photo/cosmetic-bottles-stones-light-background_185193-162140.jpg?ga=GA1.1.1794837574.1691059421&semt=ais_hybrid' },
+  { src: 'https://img.freepik.com/free-photo/cosmetic-bottles-stones-light-background_185193-162140.jpg?ga=GA1.1.1794837574.1691059421&semt=ais_hybrid', alt: 'Cosmetic bottles and stones' },
   { src: 'https://cdn.pixabay.com/photo/2019/02/18/17/26/natural-cosmetics-4004909_1280.jpg', alt: 'Woman with glowing skin' },
   { src: 'https://cdn.pixabay.com/photo/2016/06/03/16/03/essential-oils-1433694_640.jpg', alt: 'Advanced skincare research' },
 ];

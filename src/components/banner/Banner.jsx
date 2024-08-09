@@ -56,7 +56,7 @@ const Title = styled(motion.h1)`
   font-family: 'Playfair Display', serif;
   font-size: 4.5rem;
   font-weight: 700;
-  color: #FF0000; /* Red */
+  color: #000000; /* Black */
   margin-bottom: 1.5rem;
   line-height: 1.2;
   max-width: 700px;
@@ -65,6 +65,7 @@ const Title = styled(motion.h1)`
     font-size: 3rem;
   }
 `;
+
 
 const Subtitle = styled(motion.p)`
   font-family: "Quicksand", sans-serif;
@@ -79,22 +80,23 @@ const CTAButton = styled(motion.button)`
   padding: 14px 32px;
   font-size: 1rem;
   font-weight: 500;
-  background: linear-gradient(135deg, #D4AF37, #FF0000); /* Gold to Red */
-  color: #FFFFFF;
+  background: #921A40; 
+  color: #FFFFFF; /* White text for contrast */
   border: none;
   border-radius: 30px;
   cursor: pointer;
   transition: all 0.3s ease;
-   font-family: "Quicksand", sans-serif;
+  font-family: "Quicksand", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
-  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 51, 102, 0.3);
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 51, 102, 0.4);
   }
 `;
+
 
 const DecorativeElement = styled(motion.div)`
   position: absolute;

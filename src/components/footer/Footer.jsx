@@ -8,7 +8,7 @@ function Footer() {
       <FooterContent>
         <FooterSection>
           <FooterLogo>
-            <img src="logo.png" alt="BeautyGlow logo" width={100} />
+            <img src="logo.png" alt="BeautyGlow logo" width={150} />
           </FooterLogo>
           <FooterTagline>Enhance Your Natural Beauty</FooterTagline>
           <SocialIcons>
@@ -31,17 +31,17 @@ function Footer() {
           <FooterHeading>Quick Links</FooterHeading>
           <nav>
             <Link to={'/'} className='text-decoration-none'>
-            <FooterLink>Home</FooterLink>
+              <FooterLink>Home</FooterLink>
             </Link>
             <Link to={'/products'} className='text-decoration-none'>
-            <FooterLink>Products</FooterLink>
+              <FooterLink>Products</FooterLink>
             </Link>
-           <Link to={'/about'} className='text-decoration-none'> 
-           <FooterLink>About Us</FooterLink>
-           </Link>
-          <Link to={'/contact'} className='text-decoration-none'> 
-           <FooterLink>Contact</FooterLink>
-           </Link>
+            <Link to={'/about'} className='text-decoration-none'>
+              <FooterLink>About Us</FooterLink>
+            </Link>
+            <Link to={'/contact'} className='text-decoration-none'>
+              <FooterLink>Contact</FooterLink>
+            </Link>
           </nav>
         </FooterSection>
 
@@ -73,8 +73,8 @@ function Footer() {
 }
 
 const FooterContainer = styled.footer`
-  background-color: #fff;
-  color: #333;
+  background-color: #f8d7da; /* Baby Pink */
+  color: #000; /* Black text color */
   padding: 60px 0 20px;
   font-family: 'Arial', sans-serif;
 `;
@@ -117,31 +117,31 @@ const SocialIcons = styled.div`
 `;
 
 const SocialIcon = styled.a`
-  color: #333;
+  color: #000;
   font-size: 18px;
   transition: color 0.3s ease;
 
   &:hover {
-    color: #c0392b;
+    color: #921A40; /* Deep Wine */
   }
 `;
 
 const FooterHeading = styled.h3`
   font-size: 18px;
   margin-bottom: 15px;
-  color: #c0392b;
+  color: #921A40; /* Deep Wine */
 `;
 
 const FooterLink = styled.a`
   display: block;
-  color: #333;
+  color: #000;
   text-decoration: none;
   margin-bottom: 8px;
   font-size: 14px;
   transition: color 0.3s ease;
 
   &:hover {
-    color: #c0392b;
+    color: #921A40; /* Deep Wine */
   }
 `;
 
@@ -165,7 +165,7 @@ const NewsletterInput = styled.input`
 `;
 
 const NewsletterButton = styled.button`
-  background-color: #c0392b;
+  background-color: #921A40; /* Deep Wine */
   color: white;
   border: none;
   padding: 10px 15px;
@@ -174,7 +174,7 @@ const NewsletterButton = styled.button`
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: #a93226;
+    background-color: #7d0f32; /* Darker Deep Wine */
   }
 `;
 
