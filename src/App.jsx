@@ -7,6 +7,7 @@ import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
 import { useEffect } from 'react';
 import ProductInfo from './pages/productinfo/ProductInfo';
+import WhatsAppButton from './components/whatsappbutton/WhatsAppButton';
 
 function App() {
   const { pathname } = useLocation();
@@ -24,6 +25,7 @@ function App() {
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/productdetails' element={<ProductInfo/>}/>
      </Routes>
+     <WhatsAppButton/>
     </>
   )
 }

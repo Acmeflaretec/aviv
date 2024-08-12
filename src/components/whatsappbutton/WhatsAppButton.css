@@ -1,0 +1,20 @@
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px; /* Adjust the position from the bottom */
+    right: 20px; /* Adjust the position from the right */
+    z-index: 1000; /* Ensure it is on top of other elements */
+    cursor: pointer;
+  }
+  
+  .whatsapp-logo {
+    width: 50px; /* Set the size of the logo */
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .whatsapp-float:hover .whatsapp-logo {
+    transform: scale(1.1); /* Slightly enlarge the logo on hover */
+  }
+  

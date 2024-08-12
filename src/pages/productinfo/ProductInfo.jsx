@@ -4,6 +4,7 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Header from '../../components/header/Header';
 import Footer from '../../components/footer/Footer';
+import HappyCustomer from '../../components/happycustomer/HappyCustomer';
 
 const ProductContainer = styled.div`
   max-width: 1200px;
@@ -58,7 +59,7 @@ const ProductName = styled.h1`
 const ProductPrice = styled.p`
   font-size: 1.8rem;
   font-weight: bold;
-  color: #e53935;
+  color: #921A40;
   margin-bottom: 1rem;
 `;
 
@@ -188,6 +189,7 @@ function ProductInfo() {
           </AddToCartButton>
         </ProductDetails>
       </ProductContainer>
+        <HappyCustomer/>
       <Footer />
     </>
   );

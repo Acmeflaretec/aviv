@@ -8,7 +8,7 @@ function Footer() {
       <FooterContent>
         <FooterSection>
           <FooterLogo>
-            <img src="logo.png" alt="BeautyGlow logo" width={150} />
+            <img src="logo.png" alt="BeautyGlow logo" width={200} />
           </FooterLogo>
           <FooterTagline>Enhance Your Natural Beauty</FooterTagline>
           <SocialIcons>

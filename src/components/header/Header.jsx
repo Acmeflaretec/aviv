@@ -43,16 +43,19 @@ const MenuItems = styled.div`
     width: 100%;
     background: #FFFFFF;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
+    transform: ${({ isOpen }) => (isOpen ? 'translateY(0)' : 'translateY(-10px)')};
   }
 `;
 
 const MenuItem = styled(Link)`
-  color: #FF0000;
+  color: black;
   text-decoration: none;
   padding: 10px 15px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease-in-out;
   position: relative;
 
   &::after {
@@ -62,12 +65,12 @@ const MenuItem = styled(Link)`
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #D4AF37;
-    transition: width 0.3s ease;
+    background-color: #921A40;
+    transition: width 0.3s ease-in-out;
   }
 
   &:hover, &.active {
-    color: #D4AF37;
+    color: #921A40;
   }
 
   &:hover::after, &.active::after {
@@ -99,9 +102,11 @@ const MenuToggle = styled.button`
   font-size: 1.5rem;
   cursor: pointer;
   color: #FF0000;
+  transition: transform 0.3s ease-in-out;
 
   @media (max-width: 768px) {
     display: block;
+    transform: ${({ isOpen }) => (isOpen ? 'rotate(90deg)' : 'rotate(0)')};
   }
 `;
 
@@ -123,7 +128,7 @@ function Header() {
         <Logo>
           <Link to="/"><img src="logo.png" alt="logo" /></Link>
         </Logo>
-        <MenuToggle onClick={toggleMenu}>
+        <MenuToggle onClick={toggleMenu} isOpen={isMenuOpen}>
           {isMenuOpen ? '✕' : '☰'}
         </MenuToggle>
         <MenuItems isOpen={isMenuOpen}>
