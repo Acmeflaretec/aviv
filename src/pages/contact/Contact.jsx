@@ -75,11 +75,18 @@ function Contact() {
     e.preventDefault();
     setIsLoading(true);
     
-    const scriptUrl = 'https://script.google.com/macros/s/AKfycbzJ3jzrZQXvS1rpbb7rVDF0zSEfa8ZZJVz1QCyud98YHBTwl0eJCFaR_B1eLXxSoqQD2g/exec';
+    const scriptUrl = 'https://script.google.com/macros/s/AKfycbx6xQwVrOeu_iJX_ie9wfZrdvgrc2KsH5oCRuQIt5oMRSorTnUmQbPxaL-pGa6IzqeiVQ/exec';
     
+
+    const reqBody  = new FormData()
+    reqBody.append('Name', formData.name)
+    reqBody.append('Email', formData.email)
+    reqBody.append('Subject', formData.subject)
+    reqBody.append('Message', formData.message)
+    reqBody.append('Date',new Date().toDateString())
     fetch(scriptUrl, {
       method: 'POST',
-      body: new URLSearchParams(formData),
+      body: reqBody,
       mode: 'no-cors'
     })
     .then(response => {
