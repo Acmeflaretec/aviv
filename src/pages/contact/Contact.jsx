@@ -130,7 +130,7 @@ function Contact() {
                   </li>
                   <li className="mb-3">
                     <i className="bi bi-envelope-fill me-2 text-danger"></i> 
-                    example.email.com
+                    info@avivcosmetics.online
                   </li>
                   <li className="mb-3">
                     <i className="bi bi-telephone-fill me-2 text-danger"></i> 
